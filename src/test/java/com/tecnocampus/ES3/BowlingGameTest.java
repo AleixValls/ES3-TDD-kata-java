@@ -30,7 +30,7 @@ public class BowlingGameTest {
         rollMany(17, 0);
         assertThat(g.score()).isEqualTo(16);
     }
-    
+
     private void rollMany(int rolls, int pins) {
         for (var i = 0; i < rolls; i += 1)
             g.roll(pins);
