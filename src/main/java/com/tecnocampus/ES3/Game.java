@@ -9,7 +9,7 @@ public class Game {
     public int score() {
         int score = 0;
         int frameIndex = 0;
-        for (int frame = 0; frame < 10; frame++) {
+        for (isStrike(frameIndex)) {
             if (rolls[frameIndex] == 10) { // strike
                 score += 10 + strikeBonus(frameIndex);
                 frameIndex++;
@@ -22,6 +22,9 @@ public class Game {
             }
         }
         return score;
+    }
+    private boolean isStrike(int frameIndex) {
+        return rolls[frameIndex] == 10;
     }
     private int sumOfBallsInFrame(int frameIndex) {
         return rolls[frameIndex] + rolls[frameIndex + 1];
