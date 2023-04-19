@@ -24,6 +24,7 @@ public class BowlingGameTest {
     }
 
     @Test public void one_spare() {
+        rollSpare();
         g.roll(5);
         g.roll(5); // spare
         g.roll(3);
@@ -34,5 +35,9 @@ public class BowlingGameTest {
     private void rollMany(int rolls, int pins) {
         for (var i = 0; i < rolls; i += 1)
             g.roll(pins);
+    }
+    private void rollSpare() {
+        g.roll(5);
+        g.roll(5);
     }
 }
