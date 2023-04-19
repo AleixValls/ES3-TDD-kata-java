@@ -2,6 +2,7 @@ package com.tecnocampus.ES3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static com.google.common.truth.Truth.assertThat;
 
 public class BowlingGameTest {
     private Game g;
