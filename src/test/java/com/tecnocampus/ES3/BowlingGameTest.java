@@ -15,9 +15,12 @@ public class BowlingGameTest {
     public void gutter_game() {
         var rolls = 20;
         var pins = 0;
+        rollMany(rolls, pins);
+        assertThat(g.score()).isEqualTo(0);
+    }
+    private void rollMany(int rolls, int pins) {
         for (var i = 0; i < rolls; i += 1)
             g.roll(pins);
-        assertThat(g.score()).isEqualTo(0);
     }
     @Test
     public void all_ones() {
