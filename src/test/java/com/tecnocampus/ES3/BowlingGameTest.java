@@ -38,6 +38,10 @@ public class BowlingGameTest {
         rollMany(16, 0);
         assertThat(g.score()).isEqualTo(24);
     }
+    @Test public void perfect_game() {
+        rollMany(12, 10);
+        assertThat(g.score()).isEqualTo(300);
+    }
 
     private void rollMany(int rolls, int pins) {
         for (var i = 0; i < rolls; i += 1)
